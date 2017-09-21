@@ -48,9 +48,9 @@ export default class CreatePost extends Component {
             <div>
                 <form onSubmit={this.createPost}>
                     <div>
-                        <input name="authorName" type="text" value={authorName} placeholder="Name" onChange={this.handleInputChange} /><br />
-                        <input name="blogTitle" type="text" value={blogTitle} placeholder="Title" onChange={this.handleInputChange} /><br />
-                        <textarea name="blogEntry" type="text" value={blogEntry} placeholder="Blog Here" onChange={this.handleInputChange} ></textarea><br />
+                        <input name="authorName" type="text" value={authorName} placeholder="Name" onChange={this.handleInputChange} />
+                        <input name="blogTitle" type="text" value={blogTitle} placeholder="Title" onChange={this.handleInputChange} />
+                        <textarea name="blogEntry" type="text" value={blogEntry} placeholder="Blog Here" onChange={this.handleInputChange} ></textarea>
                     </div>
                     <button type="submit">Submit</button>
                 </form>
