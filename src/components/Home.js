@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class PostList extends Component {
+export default class Home extends Component {
     render() {
         return (
             <div>
-                <h1>See all Posts Here!</h1>
+                <h1>Home Page!</h1>
             </div>
         )
     }
