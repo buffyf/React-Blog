@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const styles = {
     navStyle: {
-        position: "fixed",
-        top: 0,
+        // position: "fixed",
+        // top: 0,
         width: "100%",
         display: "flex",
         justifyContent: "space-around",
@@ -28,8 +28,7 @@ export default class Header extends Component {
             <nav style={styles.navStyle}>
                 <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} exact to="/">Home</NavLink>
                 <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/createpost">Write New Post</NavLink>
-                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/postlist">See All Posts</NavLink>
-                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/showpost">Show Individual Post</NavLink>
+                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/posts">See All Posts</NavLink>
             </nav>
         )
     }
