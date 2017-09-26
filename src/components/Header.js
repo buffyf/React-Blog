@@ -2,22 +2,9 @@ import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 
 const styles = {
-    navStyle: {
-        // position: "fixed",
-        // top: 0,
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-around",
-    },
-    linkStyle: {
-        textDecoration: "none",
-        border: "3px solid blue",
-        color: "orange",
-        backgroundColor: "lightblue"
-    },
+
     activeStyle: {
-        backgroundColor: "orange",
-        color: "lightblue"
+        color: "#af1b1b"
     }
 }
 
@@ -25,11 +12,22 @@ const styles = {
 export default class Header extends Component {
     render() {
         return (
-            <nav style={styles.navStyle}>
-                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} exact to="/">Home</NavLink>
-                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/createpost">Write New Post</NavLink>
-                <NavLink style={styles.linkStyle} activeStyle={styles.activeStyle} to="/posts">See All Posts</NavLink>
+            <nav id="header" className="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
+                <div className="container">
+                    <ul className="navbar-nav mx-auto">
+                        <li className="nav-item px-lg-4">
+                            <NavLink id="header" className="nav-link text-uppercase text-expanded" activeStyle={styles.activeStyle} exact to="/">Home</NavLink>
+                        </li>
+                        <li className="nav-item px-lg-4">
+                            <NavLink id="header" className="nav-link text-uppercase text-expanded" activeStyle={styles.activeStyle} to="/createpost">Post a Message</NavLink>
+                        </li>
+                        <li className="nav-item px-lg-4">
+                            <NavLink id="header" className="nav-link text-uppercase text-expanded" activeStyle={styles.activeStyle} to="/posts">Posts</NavLink>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+
         )
     }
 }

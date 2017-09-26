@@ -45,14 +45,29 @@ export default class CreatePost extends Component {
     render() {
         let { authorName, blogTitle, blogEntry } = this.state;
         return (
-            <div>
+            <div className="bg-faded p-4 my-4">
+                <hr className="divider" />
+                <h2 className="text-center text-lg text-uppercase my-0">Write A Message</h2>
+                <hr className="divider" />
                 <form onSubmit={this.createPost}>
-                    <div>
-                        <input name="authorName" type="text" value={authorName} placeholder="Name" onChange={this.handleInputChange} />
-                        <input name="blogTitle" type="text" value={blogTitle} placeholder="Title" onChange={this.handleInputChange} />
-                        <textarea name="blogEntry" type="text" value={blogEntry} placeholder="Blog Here" onChange={this.handleInputChange} ></textarea>
+                    <div className="row">
+                        <div className="form-group col-lg-4">
+                            <label className="text-heading">Name</label>
+                            <input name="authorName" type="text" value={authorName} onChange={this.handleInputChange} className="form-control" />
+                        </div>
+                        <div className="form-group col-lg-4">
+                            <label className="text-heading">Title</label>
+                            <input name="blogTitle" type="text" value={blogTitle} onChange={this.handleInputChange} className="form-control" />
+                        </div>
+                        <div className="clearfix"></div>
+                        <div className="form-group col-lg-12">
+                            <label className="text-heading">Message</label>
+                            <textarea name="blogEntry" type="text" value={blogEntry} onChange={this.handleInputChange} className="form-control" rows="6"></textarea>
+                        </div>
+                        <div className="form-group col-lg-12">
+                            <button type="submit" className="btn btn-secondary">Submit</button>
+                        </div>
                     </div>
-                    <button type="submit">Submit</button>
                 </form>
             </div>
         )

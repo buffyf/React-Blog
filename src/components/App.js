@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import '../styles/styles.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CreatePost from "./CreatePost";
 import BaseLayout from "./BaseLayout";
